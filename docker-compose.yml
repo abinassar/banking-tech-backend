@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:16
+    container_name: pg-monedas
+    environment:
+      POSTGRES_DB: monedasdb
+      POSTGRES_USER: monedas
+      POSTGRES_PASSWORD: monedas
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+# PG Admin
+  pgadmin:
+    image: dpage/pgadmin4:8
+    container_name: pgadmin-monedas
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+volumes:
+  pgdata:
+

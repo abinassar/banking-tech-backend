@@ -1,0 +1,24 @@
+security:
+  jwt:
+    expiration-minutes: 30
+    secret-key: bWkgY2xhdmUgZXMgbXV5IHNlZ3VyYSAxMjM0NTY3ODkgQUJDYWJj
+
+timezonedb:
+  api:
+    key: NQ5Q30YNB59Z
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/monedasdb
+    username: monedas
+    password: monedas
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+
+server:
+  port: 8080

@@ -1,0 +1,1 @@
+START /B mvnw.cmd clean validate compile package
