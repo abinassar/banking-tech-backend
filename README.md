@@ -28,6 +28,18 @@ Para correr la base de datos es necesario tener **Docker** instalado en el equip
 - **PostgreSQL 16**: base de datos principal donde se guardan usuarios, monedas y criptomonedas.
 - **pgAdmin 4.8**: cliente gráfico web para administrar PostgreSQL.
 
+
+### 🔹 Cómo levantar los contenedores
+
+Una vez clonado el proyecto y con Docker instalado, en la carpeta raíz ejecuta:
+
+```bash
+docker compose up -d
+```
+
+Esto levantará los servicios de **PostgreSQL 16** y **pgAdmin 4.8** en segundo plano.
+
+
 ### 🔹 Credenciales de conexión a la base de datos
 
 ```
